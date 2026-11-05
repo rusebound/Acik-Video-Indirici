@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YouTube Video ve Ses Kaydet · Açık Video İndirici</title><link rel="stylesheet" href="style.css">
+</head>
+<body class="download-body">
+<main class="download-shell">
+  <div class="heading"><div class="brand-icon">▶</div><div><div class="eyebrow">AÇIK VİDEO İNDİRİCİ · YOUTUBE</div><h1>YouTube video veya ses kaydet</h1></div></div>
+  <p class="desc">İndirilebilir kaynaklar için video kapsayıcısı veya ses dosyası biçimi seçin. MP4 ve WebM için uygun kaynak kodekleri aranır; mümkün olmayan dönüşümler ve kalite kayıpları gizlenmez.</p>
+  <section class="panel">
+    <h2 id="title" style="font-size:17px;margin:0 0 17px">Video bilgisi okunuyor…</h2>
+    <label for="downloadMode">İndirme türü</label>
+    <select id="downloadMode" aria-label="İndirme türü">
+      <option value="video">Video + ses</option>
+      <option value="audio">Yalnızca ses (müzik)</option>
+    </select>
+    <div id="videoOptions" style="margin-top:16px">
+      <label for="videoFormat">Video dosyası biçimi</label>
+      <select id="videoFormat">
+        <option value="mkv">MKV · En geniş kaynak kalitesi desteği (önerilen)</option>
+        <option value="mp4">MP4 · H.264 + AAC (uyumlu kaynaktan)</option>
+        <option value="webm">WebM · VP9/AV1 + Opus/Vorbis</option>
+      </select>
+      <label for="quality" style="margin-top:14px">Kaynak çözünürlüğü</label>
+      <select id="quality" disabled><option>Kaliteler yükleniyor…</option></select>
+      <p class="details" id="formatHint" style="margin-bottom:0">Her biçim, yalnızca uyumlu kaynak çözünürlüklerini gösterir.</p>
+    </div>
+    <div id="audioOptions" hidden style="margin-top:16px">
+      <label for="audioFormat">Ses dosyası biçimi</label>
+      <select id="audioFormat">
+        <option value="original">Orijinal ses · M4A / WebM (yeniden kodlamasız)</option>
+        <option value="mp3" selected>MP3 · 256 kb/sn (dönüştürülmüş)</option>
+        <option value="m4a">M4A · AAC uyumlu</option>
+        <option value="opus">Opus · .opus (dönüştürme gerekebilir)</option>
+        <option value="flac">FLAC · kayıpsız biçim (dönüştürülmüş)</option>
+        <option value="wav">WAV · sıkıştırılmamış ses (dönüştürülmüş)</option>
+      </select>
+      <p class="details" style="margin-bottom:0">Orijinal seçeneği ses akışına dokunmaz. MP3/M4A/Opus/FLAC/WAV dönüştürmeleri kaynağın ses kalitesini iyileştirmez. FLAC ve WAV çıktıları büyük olabilir.</p>
+    </div>
+    <p class="details" id="details">YouTube bağlantısı kontrol ediliyor.</p>
+    <label style="display:flex;align-items:flex-start;gap:9px;line-height:1.45;font-weight:500;margin-top:17px">
+      <input type="checkbox" id="rights" style="margin-top:3px"/>
+      <span>Bu içeriği indirme ve kaydetme hakkına sahibim.</span>
+    </label>
+    <div class="actions"><button id="start" class="primary" disabled>Videoyu indir</button><button id="cancel" class="secondary" disabled>İptal</button></div>
+    <div class="progress-track"><div class="progress-fill" id="progress"></div></div>
+    <p id="message" role="status" aria-live="polite">Yerel yardımcı uygulamaya bağlanılıyor…</p>
+  </section>
+  <p class="callout">Yalnızca indirme izniniz olan içeriklerle kullanın. DRM veya erişim denetimlerini aşmaz. Chrome Web Store, YouTube indirme özelliği olan eklentileri kabul etmeyebilir. İndirme süresince bu sekmeyi açık tutun.</p>
+</main>
+<script src="youtube.js"></script>
+</body>
+</html>

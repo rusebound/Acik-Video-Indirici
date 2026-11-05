@@ -1,0 +1,32 @@
+# Windows / Python local runtime
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.log
+.env
+.env.*
+!.env.example
+
+# Generated Native Messaging files contain local install paths
+native/run_host.cmd
+native/native_manifest.json
+**/run_host.cmd
+**/native_manifest.json
+
+# Editors and build artifacts
+.vscode/
+.idea/
+*.crdownload
+*.part
+dist/
+build/
+*.zip
+*.crx
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store

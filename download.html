@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HLS Video Kaydet · Açık Video İndirici</title><link rel="stylesheet" href="style.css"></head>
+<body class="download-body">
+  <main class="download-shell">
+    <div class="heading"><div class="brand-icon">▶</div><div><span class="eyebrow">AÇIK VİDEO İNDİRİCİ</span><h1>HLS video kaydet</h1></div></div>
+    <p class="desc">DRM'siz ve indirme hakkınız olan tamamlanmış HLS videolarını, kaynakta bulunan çözünürlükte diske kaydedin.</p>
+    <section class="panel">
+      <label for="quality">Video kalitesi</label>
+      <select id="quality" disabled><option>Akış inceleniyor…</option></select>
+      <div id="details" class="details"></div>
+      <div class="actions"><button id="start" class="primary" disabled>Kaydetme konumunu seç</button><button id="cancel" class="secondary" disabled>İptal</button></div>
+      <div class="progress-track"><div id="progress" class="progress-fill"></div></div>
+      <p id="message" role="status" aria-live="polite">Video bilgileri alınıyor…</p>
+    </section>
+    <div class="callout"><strong>Önemli:</strong> HLS MPEG-TS akışları <code>.ts</code>, fMP4 akışları <code>.mp4</code> biçiminde kaydedilir. TS dosyalarını VLC gibi uyumlu oynatıcılarla açabilirsiniz. Ayrı ses kanalları, şifreli akışlar ve MPEG-DASH bu sürümde desteklenmez.</div>
+  </main>
+  <script src="core.js"></script><script src="download.js"></script>
+</body></html>
